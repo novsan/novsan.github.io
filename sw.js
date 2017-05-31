@@ -1,0 +1,36 @@
+self.addEventListener('install',e=>{
+  e.waitUntil(
+    caches.open('novsan').then(cache=>{
+      return cache.addAll([
+        '/',
+        '/jquery.min.js',
+        '/icon144.png',
+        '/icon192.png',
+        '/novsan.svg',
+        '/totop.svg',
+        '/shooting/',
+        '/shooting/left.png',
+        '/shooting/right.png',
+        '/shooting/shot.png',
+        '/shooting/stop.png',
+        '/shooting/strip.png',
+        '/create-pass/',
+        '/create-pass/clipboard.min.js',
+        '/create-pass/jquery.js',
+        '/create-pass/normalize.css',
+        '/create-pass/style.css'
+      ])
+      .then(()=>self.skipWaiting());
+    })
+  )
+});
+self.addEventListener('activate',event=>{
+  event.waitUntil(self.clients.claim());
+});
+self.addEventListener('fetch',event=>{
+  event.respondWith(
+    caches.match(event.request).then(response=>{
+      return response||fetch(event.request);
+    })
+  );
+});

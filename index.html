@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="ja" dir="ltr">
+<head>
+  <meta charset="utf8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="application-name" content="novsan">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="novsan">
+  <meta name="msapplication-TileImage" content="/icon144.png">
+  <meta name="msapplication-TileColor" content="#000">
+  <meta name="theme-color" content="#000">
+  <title>novsan</title>
+  <link rel="canonical" href="https://novsan.github.io/">
+  <link rel="manifest" href="manifest.json">
+  <link rel=icon sizes=192x192 href=/icon192.png>
+  <link rel=apple-touch-icon href=/icon192.png>
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{max-width:100%;background-color:#fefefe;color:#232323;font-family:'ヒラギノ角ゴシック','Hiragino Sans','ヒラギノ角ゴ ProN W3','Hiragino Kaku Gothic ProN','メイリオ','Meiryo','ＭＳ Ｐゴシック','MS PGothic',sans-serif;font-size:20px;line-height:1.6;letter-spacing:0.01em;word-wrap:break-word;text-align:justify;}
+    h1{font-size:1.6em;}
+    h2{font-size:1.4em;}
+    h3{font-size:1.2em;}
+    a{text-decoration:none;color:#b22222;}
+    a:hover{text-decoration:underline;}
+    p{padding-bottom:20px;}
+    header{background:#f7fe43;padding-top:1em;}
+      header img{padding-left:2em;}
+      .menu{background-color:#1e1f0c;overflow:auto;white-space:nowrap;padding-left:1em;}
+        .fixed{position:fixed;top:0;width:100%;z-index:100;}
+        .menu li{display:inline-block;color:#fefefe;text-align:center;padding:1em;text-decoration:none;}
+          .menu li a{color:#fefefe;}
+          .menu li:hover{background-color:#444;cursor:pointer;}
+    footer{background-color:#1e1f0c;color:#fefefe;padding:5% 0;font-size:0.8em;text-align:center;}
+      footer a{color:#fefefe;}
+    article{padding:1em 2em;}
+      .tabcontent{display:none;-webkit-animation:fadeEffect 1s;animation:fadeEffect 1s;}
+        @-webkit-keyframes fadeEffect{from{opacity:0;}to{opacity:1;}}
+        @keyframes fadeEffect{from{opacity:0;}to{opacity:1;}}
+        .effect{padding:1em 0;}
+          /*.effect div{margin:auto;transition:1s;}*/
+        .progress{position:relative;width:100%;height:2em;background-color:#ccc;border:3px solid #1e1f0c;}
+        #myBarHtml,#myBarCss,#myBarJavascript,#myBarPHP,#myBarMysql,#myBarPhotoshop,#myBarIllustrator{position:absolute;width:10%;height:100%;background-color:#f7fe43;}
+    .toTop{position:fixed;bottom:5%;right:5%;cursor:pointer;}
+    @media (max-width:640px){
+      body{font-size:16px;}
+      header img{padding-left:1em;width:100%;height:100%;padding-right:1em;}
+      .menu{padding-left:0;}
+      article{padding:1em;}
+      footer{padding:10% 0;}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="novsan.svg" alt="novsan">
+    <ul class="menu">
+      <li id="home" class="tablinks" onclick="openContent(event,'Home')">Home</li>
+      <li class="tablinks" onclick="openContent(event,'Skill')">Skill</li>
+      <li class="tablinks"><a href="/shooting/">Shooting</a></li>
+      <li class="tablinks"><a href="/create-pass/">CreatePassword</a></li>
+      <li class="tablinks"><a href="https://github.com/novsan/">GitHub</a></li>
+    </ul>
+  </header>
+  <article>
+    <div id="Home" class="tabcontent">
+      <h1>Home</h1>
+      <div class="effect">
+        <div>
+          <h2>はじめに</h2>
+          <p>ここは実験的なサイトです。</p>
+        </div>
+      </div>
+      <div class="effect">
+        <div>
+          <h3>Githubページ</h3>
+          <p>Githubページにて作成しています。https通信による通信を暗号化しています。</p>
+          <br>
+          <h3>PWAとして作成</h3>
+          <p>PWAはザックリ言うと、Webページがそのままスマホアプリ化できるといったものです。訪れたページを随時キャッシュとして保存し、オフラインでも訪問できるようにします（プライベートモードやキャッシュを削除したら有効ではなくなります）。</p>
+        </div>
+      </div>
+    </div>
+    <div id="Skill" class="tabcontent">
+      <h1>Skill</h1>
+      <div class="effect">
+        <div>
+          <h2>習得スキル一覧</h2>
+        </div>
+      </div>
+      <div class="effect">
+        <div>
+          <h3>HTML</h3>
+          <div class="progress">
+            <div id="myBarHtml"></div>
+          </div>
+          <br>
+          <h3>CSS</h3>
+          <div class="progress">
+            <div id="myBarCss"></div>
+          </div>
+          <br>
+          <h3>Javascript</h3>
+          <div class="progress">
+            <div id="myBarJavascript"></div>
+          </div>
+          <br>
+          <h3>PHP</h3>
+          <div class="progress">
+            <div id="myBarPHP"></div>
+          </div>
+          <br>
+          <h3>SQL</h3>
+          <div class="progress">
+            <div id="myBarMysql"></div>
+          </div>
+          <br>
+          <h3>Photoshop</h3>
+          <div class="progress">
+            <div id="myBarPhotoshop"></div>
+          </div>
+          <br>
+          <h3>llustrator</h3>
+          <div class="progress">
+            <div id="myBarIllustrator"></div>
+          </div>
+        </div>
+      </div>
+      <div class="effect">
+        <div>
+          <h2></h2>
+          <p></p>
+        </div>
+      </div>
+    </div>
+  </article>
+  <footer>
+    <span>&copy;2017 <a href="/">novsan</a></span>
+  </footer>
+  <div class="toTop"><img src="totop.svg" alt="↑"></div>
+  <script src="jquery.min.js"></script>
+  <script>
+    function openContent(evt,contentName){
+      var i,tabcontent,tablinks;
+      tabcontent=document.getElementsByClassName("tabcontent");
+      for(i=0;i<tabcontent.length;i++){
+        tabcontent[i].style.display="none";
+      }
+      tablinks=document.getElementsByClassName("tablinks");
+      for(i=0;i<tablinks.length;i++){
+        tablinks[i].className=tablinks[i].className.replace("active","");
+      }
+      document.getElementById(contentName).style.display="block";
+      evt.currentTarget.className+="active";
+      movebar();
+    }
+    document.getElementById("home").click();
+    function movebar(){
+      var elem1=document.getElementById("myBarHtml"),
+          elem2=document.getElementById("myBarCss"),
+          elem3=document.getElementById("myBarJavascript"),
+          elem4=document.getElementById("myBarPHP"),
+          elem5=document.getElementById("myBarMysql"),
+          elem6=document.getElementById("myBarPhotoshop"),
+          elem7=document.getElementById("myBarIllustrator");
+      var width=10;
+      var id1=setInterval(frame1,50),
+          id2=setInterval(frame2,50),
+          id3=setInterval(frame3,50),
+          id4=setInterval(frame4,50),
+          id5=setInterval(frame5,50),
+          id6=setInterval(frame6,50),
+          id7=setInterval(frame7,50);
+      function frame1(){
+        if(width>=80){
+          clearInterval(id1);
+        }else{
+          width++;
+          elem1.style.width=width+'%';
+        }
+      }
+      function frame2(){
+        if(width>=80){
+          clearInterval(id2);
+        }else{
+          width++;
+          elem2.style.width=width+'%';
+        }
+      }
+      function frame3(){
+        if(width>=70){
+          clearInterval(id3);
+        }else{
+          width++;
+          elem3.style.width=width+'%';
+        }
+      }
+      function frame4(){
+        if(width>=50){
+          clearInterval(id4);
+        }else{
+          width++;
+          elem4.style.width=width+'%';
+        }
+      }
+      function frame5(){
+        if(width>=60){
+          clearInterval(id5);
+        }else{
+          width++;
+          elem5.style.width=width+'%';
+        }
+      }
+      function frame6(){
+        if(width>=70){
+          clearInterval(id6);
+        }else{
+          width++;
+          elem6.style.width=width+'%';
+        }
+      }
+      function frame7(){
+        if(width>=70){
+          clearInterval(id7);
+        }else{
+          width++;
+          elem7.style.width=width+'%';
+        }
+      }
+    }
+  </script>
+  <script>
+    $(function(){
+      var nav=$('.menu'),offset=nav.offset();
+      $(window).scroll(function(){
+        if($(window).scrollTop()>offset.top){
+          nav.addClass('fixed');
+        }else{
+          nav.removeClass('fixed');
+        }
+      });
+      $(".toTop").hide();
+      $(window).scroll(function(){
+        var now=$(window).scrollTop();
+        if(now>200){
+          $('.toTop').fadeIn('slow');
+        }else{
+          $('.toTop').fadeOut('slow');
+        }
+      });
+      $(".toTop").click(function(){
+        $('html,body').animate({scrollTop:0},'slow');
+        return false;
+      });
+    });
+  </script>
+  <script>
+    if('serviceWorker' in navigator){
+      navigator.serviceWorker
+               .register('/sw.js')
+               .then(function(){console.log("Service Worker Registered");});
+    }
+  </script>
+</body>
+</html>
